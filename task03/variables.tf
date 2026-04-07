@@ -3,11 +3,7 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "location" {
-  description = "The Azure region where resources will be created"
-  type        = string
-  default     = "North Europe"
-}
+
 
 variable "storage_account_name" {
   description = "The name of the Azure Storage Account"
