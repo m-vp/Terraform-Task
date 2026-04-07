@@ -14,6 +14,6 @@ location = "North Europe"
 account_tier             = "Standard"
 account_replication_type = "GRS"
 
-vnet_address_space       = ["10.0.0.0/16"]
-frontend_subnet_prefix   = ["10.0.1.0/24"]
-backend_subnet_prefix    = ["10.0.2.0/24"]
+vnet_address_space     = ["10.0.0.0/16"]
+frontend_subnet_prefix = ["10.0.1.0/24"]
+backend_subnet_prefix  = ["10.0.2.0/24"]
