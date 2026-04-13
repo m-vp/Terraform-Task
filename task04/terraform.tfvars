@@ -18,3 +18,5 @@ vm_sku        = "Standard_B2s_v2"
 Tags = {
   Creator = "mattaparthi_venkatprashanth@epam.com"
 }
+
+ip_config_name = "internal"

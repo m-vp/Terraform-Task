@@ -12,7 +12,7 @@
 crash.log
 
 
-*.hcl
+.terraform.lock.hcl
 # Plan files
 
 *.tfplan

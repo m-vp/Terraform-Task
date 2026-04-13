@@ -84,3 +84,9 @@ variable "vm_password" {
   type        = string
   sensitive   = true
 }
+
+variable "ip_config_name" {
+  description = "IP configuration name"
+  type        = string
+  default = "internal"
+}
