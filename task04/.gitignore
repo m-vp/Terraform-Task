@@ -12,7 +12,7 @@
 crash.log
 
 
-
+*.hcl
 # Plan files
 
 *.tfplan
