@@ -46,7 +46,7 @@ variable "traffic_manager" {
   description = "tm config"
 
   type = object({
-    resource_group_key      = string
+    resource_group_key       = string
     traffic_routing_method   = string
     tm_name                  = string
     ttl_dns_config           = number
