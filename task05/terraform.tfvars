@@ -79,6 +79,6 @@ traffic_manager = {
   resource_group_key       = "RG3"
   tm_name                  = "cmaz-w7gf0vkr-mod5-traf"
   ttl_dns_config           = 30
-  relative_name_dns_config = "cmaz-w7gf0vkr-mod5-traf"
+  relative_name_dns_config = "cmaz-w7gf0vkr-mod5-trafffenddnidnend"
 }
 
