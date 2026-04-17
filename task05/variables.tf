@@ -18,6 +18,7 @@ variable "asp_configs" {
     worker_count       = number
     resource_group_key = string
     sku                = string
+    os_type            = string
   }))
 }
 

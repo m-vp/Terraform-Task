@@ -81,3 +81,4 @@ traffic_manager = {
   ttl_dns_config           = 30
   relative_name_dns_config = "cmaz-w7gf0vkr-mod5-traf"
 }
+
