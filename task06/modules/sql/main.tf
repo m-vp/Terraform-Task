@@ -18,8 +18,8 @@ resource "azurerm_mssql_server" "sql_server" {
 resource "azurerm_mssql_firewall_rule" "sql_firewall_rules" {
   name             = "agent_ip"
   server_id        = azurerm_mssql_server.sql_server.id
-  start_ip_address = var.allowed_ip_address.value
-  end_ip_address   = var.allowed_ip_address.value
+  start_ip_address = var.allowed_ip_address
+  end_ip_address   = var.allowed_ip_address
 }
 
 resource "azurerm_mssql_firewall_rule" "azure_firewall_rules" {
