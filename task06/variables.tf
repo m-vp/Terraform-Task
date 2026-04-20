@@ -15,10 +15,12 @@ variable "tags" {
 
 # Existing Key Vault
 variable "key_vault_name" {
+  description = "key vault name"
   type = string
 }
 
 variable "key_vault_rg" {
+  description = "name of rg, key vault exists in"
   type = string
 }
 
