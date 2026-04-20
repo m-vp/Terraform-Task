@@ -9,7 +9,7 @@ resource "azurerm_mssql_server" "sql_server" {
   location            = var.location
   version             = "12.0"
 
-  administrator_login          = var.kv-secret-name-sql-admin-username
+  administrator_login          = var.kv_secret_name_sql_admin_username
   administrator_login_password = random_password.sql_password.result
 
   tags = var.tags
@@ -35,7 +35,7 @@ resource "azurerm_mssql_database" "sql_database" {
 }
 
 resource "azurerm_key_vault_secret" "sql_admin_username" {
-  name         = var.kv-secret-name-sql-admin-username
+  name         = var.kv_secret_name_sql_admin_username
   value        = azurerm_mssql_server.sql_server.administrator_login
   key_vault_id = var.key_vault_id
 
@@ -43,7 +43,7 @@ resource "azurerm_key_vault_secret" "sql_admin_username" {
 }
 
 resource "azurerm_key_vault_secret" "sql_admin_password" {
-  name         = var.kv-secret-name-sql-admin-password
+  name         = var.kv_secret_name_sql_admin_password
   value        = random_password.sql_password.result
   key_vault_id = var.key_vault_id
 

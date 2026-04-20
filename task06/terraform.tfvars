@@ -36,5 +36,5 @@ allowed_ip_address = {
 }
 
 
-kv-secret-name-sql-admin-username = "sql-admin-name"
-kv-secret-name-sql-admin-password = "sql-admin-password"
+kv_secret_name_sql_admin_username = "sql-admin-name"
+kv_secret_name_sql_admin_password = "sql-admin-password"
