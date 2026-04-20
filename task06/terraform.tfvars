@@ -23,10 +23,7 @@ os_type = "Linux"
 # Web App
 dotnet_version = "8.0"
 
-allowed_ip_address = {
-  start_ip = "18.153.146.156"
-}
-
+allowed_ip_address = "18.153.146.156"
 
 kv_secret_name_sql_admin_username = "sql-admin-name"
 kv_secret_name_sql_admin_password = "sql-admin-password"
