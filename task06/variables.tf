@@ -32,10 +32,7 @@ variable "sql_sku" {
 
 variable "allowed_ip_address" {
   description = "firewall values for db"
-  type = map(object({
-    start_ip = string
-    end_ip   = string
-  }))
+  type        = string
 }
 
 variable "kv_secret_name_sql_admin_username" {

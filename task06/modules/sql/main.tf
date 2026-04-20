@@ -16,13 +16,17 @@ resource "azurerm_mssql_server" "sql_server" {
 }
 
 resource "azurerm_mssql_firewall_rule" "sql_firewall_rules" {
-  for_each = var.allowed_ip_address
-
-  name             = each.key
+  name             = "agent_ip"
   server_id        = azurerm_mssql_server.sql_server.id
-  start_ip_address = each.value["start_ip"]
-  end_ip_address   = each.value["end_ip"]
+  start_ip_address = var.allowed_ip_address.value
+  end_ip_address   = var.allowed_ip_address.value
+}
 
+resource "azurerm_mssql_firewall_rule" "azure_firewall_rules" {
+  name             = "azure services"
+  server_id        = azurerm_mssql_server.sql_server.id
+  start_ip_address = "0.0.0.0"
+  end_ip_address   = "0.0.0.0"
 }
 
 resource "azurerm_mssql_database" "sql_database" {
