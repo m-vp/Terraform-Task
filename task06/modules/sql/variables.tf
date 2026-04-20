@@ -25,10 +25,7 @@ variable "sql_db_service_model" {
 
 variable "allowed_ip_address" {
   description = "firewall values for db"
-  type = map(object({
-    start_ip = string
-    end_ip   = string
-  }))
+  type        = string
 }
 
 variable "tags" {

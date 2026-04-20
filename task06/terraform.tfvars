@@ -24,15 +24,7 @@ os_type = "Linux"
 dotnet_version = "8.0"
 
 allowed_ip_address = {
-  "agent_ip" = {
-    start_ip = "18.153.146.156"
-    end_ip   = "18.153.146.156"
-  },
-
-  "azure_ip" = {
-    start_ip = "0.0.0.0"
-    end_ip   = "0.0.0.0"
-  }
+  start_ip = "18.153.146.156"
 }
 
 
