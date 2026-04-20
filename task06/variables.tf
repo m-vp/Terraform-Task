@@ -54,8 +54,8 @@ variable "asp_sku" {
 
 # Web App
 variable "dotnet_version" {
+  description = "The .NET version for the Linux Web App"
   type        = string
-  description = "dotnet version"
 }
 
 variable "os_type" {
