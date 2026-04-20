@@ -13,10 +13,6 @@ variable "asp_sku" {
   description = "SKU of the App Service Plan (e.g., F1, B1, S1)"
 }
 
-variable "dotnet_version" {
-  type        = string
-  description = "Version of .NET to be used in the Web App (e.g., 6.0, 7.0)"
-}
 
 variable "tags" {
   type        = map(string)
