@@ -41,6 +41,6 @@ variable "sql_connection_string" {
 }
 
 variable "dotnet_version" {
-  type        = number
-  description = "version"
+  description = "The .NET version for the Linux Web App"
+  type        = string
 }
