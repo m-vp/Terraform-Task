@@ -13,7 +13,7 @@ locals {
     "Server=tcp:%s.database.windows.net,1433;Initial Catalog=%s;Persist Security Info=False;User ID=%s;Password=%s;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
     azurerm_mssql_server.sql_server.name,
     azurerm_mssql_database.sql_database.name,
-    var.kv-secret-name-sql-admin-username,
+    var.kv_secret_name_sql_admin_username,
     random_password.sql_password.result
   )
 }

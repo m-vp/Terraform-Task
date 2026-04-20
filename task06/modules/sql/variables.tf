@@ -24,8 +24,11 @@ variable "sql_db_service_model" {
 }
 
 variable "allowed_ip_address" {
-  type        = map(string)
-  description = "Map of firewall rule names to their corresponding start and end IP addresses"
+  description = "firewall values for db"
+  type = map(object({
+    start_ip = string
+    end_ip   = string
+  }))
 }
 
 variable "tags" {
@@ -38,12 +41,12 @@ variable "key_vault_id" {
   description = "id of the key vault"
 }
 
-variable "kv-secret-name-sql-admin-username" {
+variable "kv_secret_name_sql_admin_username" {
   type        = string
   description = "secret name for sql admin username"
 }
 
-variable "kv-secret-name-sql-admin-password" {
+variable "kv_secret_name_sql_admin_password" {
   type        = string
   description = "secret name for sql admin password"
 }
