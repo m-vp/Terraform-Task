@@ -27,3 +27,5 @@ allowed_ip_address = "18.153.146.156"
 
 kv_secret_name_sql_admin_username = "sql-admin-name"
 kv_secret_name_sql_admin_password = "sql-admin-password"
+
+firewall_rule_name = "allow-verification-ip"
