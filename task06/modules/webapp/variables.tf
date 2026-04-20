@@ -37,6 +37,7 @@ variable "os_type" {
 variable "sql_connection_string" {
   type        = string
   description = "SQL connection string for the Web App"
+  sensitive   = true
 }
 
 variable "dotnet_version" {
