@@ -62,3 +62,8 @@ variable "os_type" {
   type        = string
   description = "os type"
 }
+
+variable "firewall_rule_name" {
+  type        = string
+  description = "Name of the firewall rule for allowed IP address"
+}

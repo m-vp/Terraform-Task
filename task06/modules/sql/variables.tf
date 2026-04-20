@@ -47,3 +47,8 @@ variable "kv_secret_name_sql_admin_password" {
   type        = string
   description = "secret name for sql admin password"
 }
+
+variable "firewall_rule_name" {
+  type        = string
+  description = "Name of the firewall rule for allowed IP address"
+}

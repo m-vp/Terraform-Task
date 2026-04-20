@@ -26,6 +26,8 @@ module "sql" {
 
   key_vault_id = data.azurerm_key_vault.kv.id
 
+  firewall_rule_name = var.firewall_rule_name
+
   tags = var.tags
 
 }
