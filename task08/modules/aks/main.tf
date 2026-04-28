@@ -54,3 +54,21 @@ resource "azurerm_key_vault_access_policy" "aks" {
     azurerm_kubernetes_cluster.aks
   ]
 }
+
+resource "azurerm_key_vault_access_policy" "aks_secrets_provider" {
+  key_vault_id = var.key_vault_id
+
+  tenant_id = data.azurerm_client_config.current.tenant_id
+
+  # 👇 Key Vault secrets provider identity (used by CSI driver)
+  object_id = azurerm_kubernetes_cluster.aks.key_vault_secrets_provider[0].secret_identity[0].object_id
+
+  secret_permissions = [
+    "Get",
+    "List"
+  ]
+
+  depends_on = [
+    azurerm_kubernetes_cluster.aks
+  ]
+}
