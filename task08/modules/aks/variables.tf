@@ -8,6 +8,11 @@ variable "aks_node_count" {
   type        = number
 }
 
+variable "aks_node_pool_name" {
+  description = "The name of the default node pool"
+  type        = string
+}
+
 variable "aks_node_vm_size" {
   description = "The size of the VM for the AKS nodes"
   type        = string
