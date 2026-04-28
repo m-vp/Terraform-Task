@@ -38,7 +38,7 @@ module "redis" {
 module "acr" {
   source = "./modules/acr"
 
-  acr_name = var.acr_name
+  acr_name = local.acr_name
   location = var.location
 
   rg_name = azurerm_resource_group.rg.name

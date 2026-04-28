@@ -51,10 +51,7 @@ variable "kv_sku" {
 
 
 # 📦 ACR
-variable "acr_name" {
-  description = "Azure Container Registry name"
-  type        = string
-}
+
 
 variable "acr_sku" {
   description = "ACR SKU"
