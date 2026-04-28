@@ -21,16 +21,17 @@ docker_image_name = "cmtr-w7gf0vkr-mod8-app"
 aci_sku = "Standard"
 
 
-node_pool_name = "system"
-node_count     = 1
-node_vm_size   = "Standard_D2ads_v6"
-os_disk_type   = "Ephemeral"
+node_pool_name  = "system"
+node_count      = 1
+node_vm_size    = "Standard_D2ads_v6"
+os_disk_type    = "Ephemeral"
+os_disk_size_gb = 50
 
 tags = {
   Creator = "mattaparthi_venkatprashanth@epam.com"
 }
 
-repo_url = "https://github.com/m-vp/Terraform-Task/task08/application/"
+repo_url = "https://github.com/m-vp/Terraform-Task#main:task08/application"
 
 aci_ip_type = "Public"
 aci_os_type = "Linux"

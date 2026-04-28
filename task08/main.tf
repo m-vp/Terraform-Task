@@ -108,8 +108,8 @@ module "aks" {
 
   key_vault_id = module.kv.key_vault_id
 
-  os_disk_type = var.os_disk_type
-
+  os_disk_type    = var.os_disk_type
+  os_disk_size_gb = var.os_disk_size_gb
 
   tags = var.tags
 

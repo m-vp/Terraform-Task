@@ -5,10 +5,11 @@ resource "azurerm_kubernetes_cluster" "aks" {
   dns_prefix          = var.aks_dns_prefix
 
   default_node_pool {
-    name         = "default"
-    node_count   = var.aks_node_count
-    vm_size      = var.aks_node_vm_size
-    os_disk_type = var.os_disk_type
+    name            = "default"
+    node_count      = var.aks_node_count
+    vm_size         = var.aks_node_vm_size
+    os_disk_type    = var.os_disk_type
+    os_disk_size_gb = var.os_disk_size_gb
   }
 
   identity {

@@ -43,6 +43,11 @@ variable "os_disk_type" {
   type        = string
 }
 
+variable "os_disk_size_gb" {
+  description = "The OS disk size in GB for the AKS nodes"
+  type        = number
+}
+
 variable "key_vault_id" {
   description = "Key Vault ID"
   type        = string
