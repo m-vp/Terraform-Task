@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "rg" {
 
 module "kv" {
   source   = "./modules/keyvault"
-  kv_name  = local.kv_name
+  kv_name  = local.keyvault_name
   location = var.location
   rg_name  = azurerm_resource_group.rg.name
   sku_name = var.kv_sku
