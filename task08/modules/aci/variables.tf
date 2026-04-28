@@ -10,7 +10,7 @@ variable "aci_name" {
 
 variable "location" {
   description = "Location of the Azure Container Instance"
-  type = string
+  type        = string
 }
 
 variable "sku_name" {
@@ -30,22 +30,22 @@ variable "ip_type" {
 
 variable "os_type" {
   description = "os type"
-  type = string
+  type        = string
 }
 
 variable "acr_login_server" {
   description = "login server for acr"
-  type = string
+  type        = string
 }
 
 variable "acr_username" {
   description = "username for acr"
-  type = string
+  type        = string
 }
 
 variable "acr_password" {
   description = "password for acr"
-  type = string
+  type        = string
 }
 
 variable "docker_image_name" {
@@ -91,7 +91,7 @@ variable "redis_url" {
 
 variable "redis_password" {
   description = "password for redis"
-  type = string
+  type        = string
 }
 
 

@@ -19,13 +19,13 @@ resource "azurerm_container_group" "aci" {
     }
 
     environment_variables = {
-      CREATOR    = "ACI"
-      REDIS_PORT = var.redis_port
+      CREATOR        = "ACI"
+      REDIS_PORT     = var.redis_port
       REDIS_SSL_MODE = var.redis_ssl_mode
     }
 
     secure_environment_variables = {
-      REDIS_URL = var.redis_url 
+      REDIS_URL = var.redis_url
       REDIS_PWD = var.redis_password
     }
   }

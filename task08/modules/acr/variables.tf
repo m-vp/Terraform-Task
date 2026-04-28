@@ -20,7 +20,7 @@ variable "acr_sku" {
 
 variable "image_name" {
   description = "name of the image"
-  type = string
+  type        = string
 }
 
 variable "tags" {
