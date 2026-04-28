@@ -102,6 +102,11 @@ variable "os_disk_type" {
   type        = string
 }
 
+variable "os_disk_size_gb" {
+  description = "OS disk size in GB"
+  type        = number
+}
+
 variable "tags" {
   description = "Common tags"
   type        = map(string)
