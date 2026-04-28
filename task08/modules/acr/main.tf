@@ -4,6 +4,8 @@ resource "azurerm_container_registry" "acr" {
   resource_group_name = var.rg_name
   sku                 = var.acr_sku
   tags                = var.tags
+
+  admin_enabled = true
 }
 
 resource "azurerm_container_registry_task" "ACR-task" {

@@ -1,5 +1,5 @@
 output "aci_fqdn" {
-  value       = module.ACI.container_group.fqdn
+  value       = module.aci.aci_fqdn
   description = "The fully qualified domain name (FQDN) of the Azure Container Instance."
 }
 
