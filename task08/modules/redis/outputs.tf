@@ -5,11 +5,11 @@ output "redis_id" {
 
 output "redis_hostname" {
   description = "redis hostname"
-  value = azurerm_redis_cache.redis.hostname
+  value       = azurerm_redis_cache.redis.hostname
 }
 
 output "redis_primary_key" {
   description = "redis primary key"
-  value = azurerm_redis_cache.redis.primary_access_key
+  value       = azurerm_redis_cache.redis.primary_access_key
 }
 

@@ -45,5 +45,5 @@ variable "rg_name" {
 
 variable "tags" {
   description = "tags"
-  type = map(string)
+  type        = map(string)
 }
