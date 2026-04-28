@@ -103,8 +103,9 @@ module "aks" {
 
   aks_dns_prefix = local.aks_name
 
-  aks_node_count   = var.node_count
-  aks_node_vm_size = var.node_vm_size
+  aks_node_pool_name = var.node_pool_name
+  aks_node_count     = var.node_count
+  aks_node_vm_size   = var.node_vm_size
 
   key_vault_id = module.kv.key_vault_id
 
