@@ -40,7 +40,3 @@ variable "git_pat" {
   sensitive   = true
 }
 
-variable "image_name" {
-  description = "The name of the Docker image to be built and pushed to ACR"
-  type        = string
-}
