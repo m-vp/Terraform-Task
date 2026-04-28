@@ -30,7 +30,7 @@ module "redis" {
   redis_primary_key_secret_name = var.redis_primary_key_secret_name
   redis_hostname_secret_name    = var.redis_hostname_secret_name
 
-  kv_id = module.kv.kv_id
+  kv_id = module.kv.key_vault_id
 
   depends_on = [module.kv]
 }
@@ -68,9 +68,9 @@ module "aci" {
   ip_type = var.aci_ip_type
   os_type = var.aci_os_type
 
-  acr_login_server = module.acr.acr_login_server
-  acr_username     = module.acr.acr_username
-  acr_password     = module.acr.acr_password
+  acr_login_server = module.acr.container_registry.login_server
+  acr_username     = module.acr.container_registry.admin_username
+  acr_password     = module.acr.container_registry.admin_password
 
   docker_image_name = var.docker_image_name
 
@@ -88,6 +88,32 @@ module "aci" {
   application_port = var.application_port
 
   depends_on = [module.acr]
+}
+
+
+module "aks" {
+  source = "./modules/aks"
+
+  aks_name = local.aks_name
+  location = var.location
+
+  rg_name = azurerm_resource_group.rg.name
+
+  aks_dns_prefix = local.aks_name
+
+  aks_node_count   = var.node_count
+  aks_node_vm_size = var.node_vm_size
+
+  key_vault_id = module.kv.key_vault_id
+
+  os_disk_type = var.os_disk_type
+
+
+  tags = var.tags
+
+  acr_id = module.acr.container_registry.id
+
+  depends_on = [module.kv]
 }
 
 resource "kubectl_manifest" "secret_provider" {
